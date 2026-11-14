@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173e67">
+  <title>Missão: conquistar o meu coração</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="scene" aria-label="Missão romântica">
+    <div class="landscape" aria-hidden="true"></div>
+    <div class="color-wash" aria-hidden="true"></div>
+    <div class="sun-glow" aria-hidden="true"></div>
+    <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+    <div class="fireflies" id="fireflies" aria-hidden="true"></div>
+
+    <section class="heart-intro" id="heart-intro" aria-label="Abertura da missão">
+      <div class="intro-vignette" aria-hidden="true"></div>
+      <div class="intro-glow" aria-hidden="true"></div>
+      <div class="intro-content" id="intro-content">
+        <p class="intro-message">Essa é a surpresa que eu preparei para você, meu príncipe...</p>
+        <button class="giant-heart-button" id="giant-heart-button" type="button" aria-label="Abrir a surpresa">
+          <span class="giant-heart" aria-hidden="true">❤</span>
+          <span class="heart-aura" aria-hidden="true"></span>
+        </button>
+        <p class="intro-tap">TOQUE NO CORAÇÃO</p>
+      </div>
+      <div class="heart-burst" id="heart-burst" aria-hidden="true"></div>
+      <div class="intro-blackout" id="intro-blackout" aria-hidden="true"></div>
+    </section>
+
+    <section class="entry-card" id="entry-screen" aria-labelledby="page-title" hidden>
+      <div class="portal-aura" aria-hidden="true"></div>
+      <button class="portal-heart" id="portal-heart" type="button" aria-label="Clique no coração para espalhar coraçõezinhos"><span aria-hidden="true">♥</span><i aria-hidden="true">✦</i><b aria-hidden="true">✧</b></button>
+      <div class="magic-dust" id="magic-dust" aria-hidden="true"></div>
+      <div class="tiny-label"><span class="label-star">✦</span> UMA MISSÃO ESPECIAL <span class="label-star">✦</span></div>
+      <h1 id="page-title" class="visually-hidden">Uma aventura especial espera por você, meu gatão</h1>
+      <p class="intro">Uma aventura especial espera por você, meu gatão...</p>
+      <form id="password-form" novalidate>
+        <label for="password">Acerte a chave para desbloquear</label>
+        <div class="digit-entry" id="digit-entry">
+          <div class="digit-slots" aria-hidden="true">
+            <span class="digit-slot"><i>✧</i></span><span class="digit-slot"><i>✧</i></span>
+            <span class="digit-separator">✦</span>
+            <span class="digit-slot"><i>✧</i></span><span class="digit-slot"><i>✧</i></span>
+          </div>
+          <input id="password" name="password" type="password" inputmode="numeric" pattern="[0-9]*" autocomplete="off" maxlength="4" aria-label="Digite os quatro números da senha" aria-describedby="feedback">
+          <button class="show-password" type="button" id="toggle-password" aria-label="Mostrar senha" title="Mostrar senha">◉</button>
+        </div>
+        <button class="key-button" type="submit">
+          <span class="button-key" aria-hidden="true">🗝</span><span>DESBLOQUEAR</span><span class="button-sparkle" aria-hidden="true">✦</span>
+        </button>
+        <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+      </form>
+      <div class="bottom-note"><span>♡</span> feito com muito carinho, só para você meu amor <span>♡</span></div>
+      <div class="portal-orbit orbit-a" aria-hidden="true">✧</div><div class="portal-orbit orbit-b" aria-hidden="true">✦</div>
+    </section>
+
+    <section class="quiz-screen" id="quiz-screen" aria-labelledby="quiz-title" hidden>
+      <button class="book-cover" id="book-cover" type="button" aria-label="Abrir o livro: Os nossos momentos">
+        <span class="cover-glow" aria-hidden="true"></span>
+        <span class="cover-corner cover-corner-top">✦ ❧ ✦</span>
+        <span class="cover-heart" aria-hidden="true">♡</span>
+        <span class="cover-title">OS nossos<br>momentos</span>
+        <span class="cover-subtitle">UM CAPÍTULO SOBRE NÓS</span>
+        <span class="cover-open-hint">✦ &nbsp; TOQUE PARA ABRIR &nbsp; ✦</span>
+        <span class="cover-corner cover-corner-bottom">✦ ❧ ✦</span>
+      </button>
+      <div class="book-particles" id="book-particles" aria-hidden="true"></div>
+      <div class="book" id="open-book" hidden>
+        <div class="book-spine" aria-hidden="true"></div>
+        <div class="book-top">
+          <span class="book-ornament">✦ ❧ ✦</span>
+          <span class="chapter-label">CAPÍTULO I · O CAVALEIRO</span>
+          <span class="book-ornament">✦ ❧ ✦</span>
+        </div>
+        <h2 id="quiz-title">Vamos ver se esse cavaleiro conhece mesmo a princesa!</h2>
+        <div class="quiz-progress">
+          <span id="question-count">PERGUNTA 1 DE 7</span>
+          <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+          <div class="progress-dots" id="progress-dots" aria-label="Progresso das perguntas"></div>
+        </div>
+        <div class="question-area" id="question-area">
+          <div class="question-icon" id="question-icon" aria-hidden="true">🌿</div>
+          <p class="question-text" id="question-text"></p>
+          <div class="answers" id="answers"></div>
+          <p class="answer-feedback" id="answer-feedback" role="status" aria-live="polite"></p>
+          <button class="next-button" id="next-question" type="button" disabled>Próxima página <span>❧</span></button>
+        </div>
+        <div class="quiz-finish" id="quiz-finish" hidden>
+          <div class="finish-emblem"><img src="assets/anime/medalha-2.jpg" alt="Ilustração do casal dormindo, bem fofinhos"></div>
+          <p class="finish-label">CAPÍTULO CONCLUÍDO</p>
+          <h3>Você conhece o coração da princesa!</h3>
+          <p id="final-message">Cada aventura fica ainda mais especial ao seu lado. 💙</p>
+          <div class="score-line" id="score-line"></div>
+          <div class="finish-actions">
+            <button class="next-button" id="go-to-machine" type="button">Ir para a máquina de recompensas 🎁</button>
+            <button class="replay-button" id="restart-quiz" type="button">Ler o livro novamente ↻</button>
+          </div>
+          
+        </div>
+        <div class="book-footer"><span>♡</span><span id="page-number">1</span><span>♡</span></div>
+      </div>
+    </section>
+
+    <section class="machine-screen" id="machine-screen" aria-labelledby="machine-title" hidden>
+      <div class="machine-heading">
+        <p class="machine-kicker">CAPÍTULO II · A COLEÇÃO DA PRINCESA</p>
+        <h2 id="machine-title">Máquina de recompensas</h2>
+        <p class="machine-intro">Use o anzol para conquistar os 7 presentinhos preparados especialmente para você, meu príncipe. 💗</p>
+      </div>
+
+      <div class="machine-layout">
+        <div class="claw-machine" aria-label="Máquina de corações de pelúcia">
+          <div class="machine-top"><span>♡ PRÊMIOS DO AMOR ♡</span><span class="machine-lights">● ● ● ● ● ●</span></div>
+          <div class="machine-window">
+            <div class="machine-glow"></div>
+            <div class="machine-rail"></div>
+            <div class="claw" id="claw" aria-label="Anzol dourado controlável">
+              <div class="claw-cable"></div>
+              <svg class="claw-hook" viewBox="0 0 72 112" role="img" aria-label="Anzol em formato de J">
+                <defs><linearGradient id="hookGold" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9b6827"/><stop offset=".32" stop-color="#ffe9a3"/><stop offset=".62" stop-color="#d5a13d"/><stop offset="1" stop-color="#fff0b8"/></linearGradient></defs>
+                <path class="hook-metal" d="M39 3 C47 3 49 8 49 15 L49 65 C49 91 29 107 12 96 C-3 86 -3 67 9 51 L17 40"/>
+                <path class="hook-barb" d="M8 53 L19 59 L16 46"/>
+                <ellipse class="hook-eye" cx="44" cy="8" rx="7" ry="5"/>
+              </svg>
+            </div>
+            <div class="prize-field" id="prize-field">
+              <div class="prize plush heart-prize" aria-label="Coração de pelúcia" style="--x:8%;--y:63%">💗</div>
+              <div class="prize plush heart-prize" aria-label="Coração de pelúcia" style="--x:28%;--y:71%">💗</div>
+              <div class="prize plush heart-prize" aria-label="Coração de pelúcia" style="--x:47%;--y:62%">💗</div>
+              <div class="prize plush heart-prize" aria-label="Coração de pelúcia" style="--x:67%;--y:70%">💗</div>
+              <div class="prize plush heart-prize" aria-label="Coração de pelúcia" style="--x:84%;--y:60%">💗</div>
+              <div class="prize plush heart-prize" aria-label="Coração de pelúcia" style="--x:20%;--y:38%">💗</div>
+              <div class="prize plush heart-prize" aria-label="Coração de pelúcia" style="--x:59%;--y:39%">💗</div>
+            </div>
+            <div class="machine-floor"></div>
+            <div class="drop-chute"><span>♡</span><small>RETIRAR</small></div>
+          </div>
+          <div class="machine-controls">
+            <div class="control-arrows">
+              <button type="button" class="arrow-control" id="move-left" aria-label="Mover anzol para esquerda">◀</button>
+              <button type="button" class="arrow-control" id="move-right" aria-label="Mover anzol para direita">▶</button>
+            </div>
+            <button type="button" class="grab-button" id="grab-prize">PEGAR! ✨</button>
+          </div>
+          <button class="treasure-next-button machine-next-button" id="go-to-treasure" type="button" hidden>AVANÇAR PARA O TESOURO FINAL <span>✦</span></button>
+          <p class="machine-hint" id="machine-hint" role="status" aria-live="polite">Escolha uma posição, mova a garra entre os corações e aperte PEGAR!</p>
+        </div>
+
+        <aside class="prize-collection">
+          <div class="collection-title"><span>✦</span><div><h3>Sua coleção</h3><p id="collection-count">0 de 7 prêmios</p></div></div>
+          <div class="collection-progress"><div id="collection-progress-fill"></div></div>
+          <div class="collection-list" id="collection-list">
+            <div class="collection-empty" id="collection-empty">Seus prêmios vão aparecer aqui conforme você os conquistar. 💝</div>
+          </div>
+          <div class="collection-footer">Conquiste todos os 7 para desbloquear o próximo desafio!</div>
+        </aside>
+      </div>
+      <div class="machine-bottom-note">feito com carinho, especialmente para o meu cavaleiro <span>♡</span></div>
+    </section>
+    <div class="prize-pop" id="prize-pop" hidden aria-live="polite"></div>
+    <section class="gift-recap-overlay" id="gift-recap-overlay" hidden aria-label="Presentes conquistados">
+      <div class="gift-recap-card">
+        <p class="gift-recap-kicker">✦ SUA COLEÇÃO COMPLETA ✦</p>
+        <h2>Todos esses presentes são seus!</h2>
+        <div class="gift-carousel" aria-live="polite">
+          <button class="gift-carousel-arrow" id="gift-prev" type="button" aria-label="Presente anterior">‹</button>
+          <div class="gift-slide" id="gift-slide">
+            <div class="gift-slide-emoji" id="gift-slide-emoji">💗</div>
+            <p class="gift-slide-count" id="gift-slide-count">1 de 7</p>
+            <h3 id="gift-slide-name">Vale-beijo</h3>
+            <p id="gift-slide-description"></p>
+          </div>
+          <button class="gift-carousel-arrow" id="gift-next" type="button" aria-label="Próximo presente">›</button>
+        </div>
+        <p class="physical-gift-note" id="physical-gift-note" hidden>O seu presente físico só será liberado no restaurante</p>
+        <button class="claim-last-gift" id="claim-last-gift" type="button" hidden>Resgatar o último presente</button>
+      </div>
+    </section>
+
+    <!-- TELA 4: TESOURO FINAL. O baú é construído em camadas 3D para a tampa abrir de verdade. -->
+    <section class="treasure-screen" id="treasure-screen" hidden aria-labelledby="treasure-title">
+      <p class="treasure-kicker">CAPÍTULO III · A RECOMPENSA FINAL</p>
+      <h2 id="treasure-title">Um tesouro guardado especialmente para você</h2>
+      <p class="treasure-intro">Depois de tantas aventuras, chegou a hora de descobrir sua última surpresa...</p>
+      <div class="treasure-chest-wrap" id="treasure-chest-wrap">
+        <button class="chest-button" id="open-chest" type="button" aria-label="Abrir o baú do tesouro">
+          <span class="chest-aura" aria-hidden="true"></span>
+          <img class="chest-image chest-closed-image" src="assets/bau-fechado.png" alt="Baú fechado dourado com pedras vermelhas">
+          <img class="chest-image chest-open-image" src="assets/bau-aberto.png" alt="Baú aberto revelando um brilho dourado" hidden>
+          <span class="chest-click-hint" id="chest-click-hint">✦ TOQUE NO BAÚ PARA ABRIR ✦</span>
+        </button>
+      </div>
+      <div class="treasure-stars" id="treasure-stars" aria-hidden="true"></div>
+      <div class="treasure-blackout" id="treasure-blackout" aria-hidden="true"></div>
+      <div class="treasure-reward" id="treasure-reward" hidden>
+        <p class="reward-overline">✦ RECOMPENSA LENDÁRIA DESBLOQUEADA ✦</p>
+        <h3>VOCÊ RECEBEU UMA CARTA!</h3>
+        <p>Uma mensagem muito especial foi guardada aqui para você.</p>
+        <button class="gold-action-button" id="show-envelope" type="button">CLIQUE PARA ABRIR <span>✉</span></button>
+      </div>
+    </section>
+
+    <!-- A carta ocupa uma cena própria, sem o baú ao fundo. -->
+    <section class="letter-screen" id="letter-screen" hidden aria-label="A carta especial">
+      <div class="envelope-scene" id="envelope-scene">
+        <p class="letter-kicker">UMA MENSAGEM ESPECIAL PARA VOCÊ</p>
+        <button class="royal-envelope" id="open-envelope" type="button" aria-label="Abrir o envelope com selo de cera">
+          <span class="envelope-paper-peek"></span>
+          <span class="envelope-back"></span>
+          <span class="envelope-flap"></span>
+          <span class="envelope-front"></span>
+          <span class="wax-seal">♥</span>
+        </button>
+        <p class="envelope-hint" id="envelope-hint">✦ CLIQUE NO SELO PARA ABRIR ✦</p>
+      </div>
+      <article class="royal-letter" id="royal-letter" hidden>
+        <div class="letter-inner-border">
+          <div class="letter-top-ornament">❧ ✦ ❧</div>
+          <p class="letter-heading">De: Mariah Mafra Soares <br> 
+                                    Para: Vinicius Garcia Dos Santos
+          </p><br> 
+          <div class="letter-divider">✦ ❧ ✦</div>
+          <!-- Substitua o texto abaixo pela sua declaração quando estiver pronta. -->
+          <div class="letter-body" id="love-letter-text" contenteditable="true" spellcheck="true">Para o meu principe,
+
+      Hoje estamos oficialmente fazendo dois anos juntos, é tão bom... tão gratificante, eu me sinto tão feliz e tão amada por você, você cuida tão bem de mim sempre me enche de carinho e sempre me dá muita atenção, eu amo isso em você! esses dois anos juntos passaram tão rápido, nem acredito que já nos formamos no ensino médio, esses dois anos estão carregados que milhares de momentos incríveis e o mais divertido é que é só o começo, quero viver uma vida com você, quero fazer uma vida inteira de momentos incríveis, porque você é o meu garoto especial, me apaixonei por você num primeiro instante pela sua risada, mas conforme nós estamos nos conhecendo, eu não sou me apaixonei pela sua risada de novo, como também pelas suas manias 
+pelas coisas que você gosta, inclusive talvez você não saiba, mas eu começo a gostar das coisas que você gosta com muita facilidade, simplesmente pelo fato de você achar tão legal, eu começo a querer gostar também, porque eu amo conversar, rir, brincar e compartilhar tudo com você amor.
+      Meu amor você trouxe muita felicidade na minha vida, eu pedi a Deus que ele me desse um namorado bonzinho, amoroso, romântico, apaixonado, forte, atencioso, bonito, engraçado e que acima de tudo que ele quisesse viver uma vida ao meu lado seguindo a Deus. E você amor é simplesmente tudo isso, Deus não só me entregou o que eu queria, ele me entregou mais do que isso, me deu um homem que me ama e que faz de tudo por mim, que quer casar comigo, construir uma família, que me protege, que sempre tenta ser 
+melhor a cada dia, que se esforce e planeja um futuro comigo. E é por isso que eu amo você, eu te admiro, me sinto segura e também me sinto muito importante. 
+      E obrigado por tudo que passamos juntos até agora. Se eu pudesse voltar no tempo, eu faria tudo de novo, eu escolheria você todas as vezes, porque você é o meu amor o meu raio de sol, eu quero casar com você, quero viajar, ter filhos, envelhecer ao seu lado.       
+
+Com muito amor da sua princesa ♡</div>
+          <div class="letter-bottom-ornament">✦ ❧ ✦</div>
+          <p class="letter-ending">E então, você aceita viver uma vida inteira ao meu lado?<br>Quero ficar ao seu lado para sempre...</p>
+        </div>
+      </article>
+    </section>
+    <div class="corner-note" id="corner-note" aria-hidden="true">✦ nossa próxima aventura começa aqui ✦</div>
+  </main>
+  <script src="script.js"></script>
+  <script src="extras.js"></script>
+</body>
+</html>

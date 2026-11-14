@@ -1,0 +1,39 @@
+MISSÃO: CONQUISTAR O MEU CORAÇÃO — TELAS 1, 2 E 3
+
+Incluído:
+- Tela 1: entrada com senha 12/11 e paisagem.
+- Tela 2: livro com quiz de 7 perguntas e 3 alternativas.
+- Tela 3: máquina de recompensas com garra controlável, 7 prêmios e coleção.
+
+Como executar:
+1. Extraia o ZIP.
+2. Abra a pasta no VS Code (Arquivo > Abrir Pasta).
+3. Execute index.html com Live Server.
+4. Digite a senha 12/11, conclua as 7 perguntas e clique em “Ir para a máquina de recompensas”.
+5. Use os botões ◀ e ▶ (ou as setas do teclado) para posicionar a garra; clique em PEGAR!
+
+A máquina permite tentativas ilimitadas. A Tela 4 (Guardião das Sombras) ainda não foi implementada.
+
+
+Atualização da Tela 3: todos os itens visíveis são corações de pelúcia iguais. A garra recolhe um coração e só então revela o próximo prêmio da sequência fixa e secreta.
+
+Atualização visual: o botão para o tesouro final fica dentro da máquina, abaixo de PEGAR. O baú usa imagens próprias (fechado e aberto) em assets/; ao clicar, a cena escurece e revela o baú aberto com partículas e a mensagem central.
+
+
+=== ATUALIZAÇÃO: MELHORIAS GERAIS ===
+- Som: música ambiente suave + efeitos (clique, garra, prêmio, baú, selo, digitação). Tudo sintetizado pelo navegador, sem arquivos de áudio. Botão 🔊/🔇 no canto superior direito. A música começa no primeiro toque (regra dos navegadores).
+- Arte anime: imagens em assets/anime/ (foto-1..5.jpg = carrossel da "Foto especial"; medalha-1..7.jpg = recortes usados nos prêmios, coleção e capa/resultado do livro). A carta tem fundo e marca d'água com as ilustrações.
+- Máquina: corações de pelúcia em SVG, garra arrastável com o dedo/mouse, confete, vibração no celular e mensagens diferentes quando erra.
+- Quiz: virada de página em 3D e sons de acerto/erro.
+- Pétalas caem nas telas do baú e da carta.
+- Carta: texto digitado letra por letra com fonte manuscrita (clique na carta para pular a animação). Ao terminar aparece o convite "Aceita o convite?".
+  -> Para personalizar o convite (data, local e botão de WhatsApp), edite o objeto CONVITE no topo do arquivo extras.js.
+- Progresso salvo no navegador: se a página for atualizada, continua de onde parou. Para zerar: clique em "Recomeçar" no aviso ou abra a página com ?reset no final do endereço.
+- Quem desativa animações no sistema (prefers-reduced-motion) vê a versão com menos movimento.
+- A Tela 4 (baú e carta) já está implementada.
+
+=== AJUSTES FINAIS DA CARTA ===
+- Fundo e posição da carta voltaram ao original (cachoeira ao fundo, carta centralizada).
+- Mensagem final: "E então, você aceita viver uma vida inteira ao meu lado? / Quero ficar ao seu lado para sempre..." (editável em index.html, classe letter-ending).
+- O botão "Deixa eu pensar…" some da tela ao ser clicado.
+- A trilha sonora continua a original (a versão mais calma foi descartada).
